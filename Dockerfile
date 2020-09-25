@@ -1,4 +1,4 @@
-FROM lancachenet/generic:latest
+FROM lancachenet/generic:stream
 MAINTAINER LanCache.Net Team <team@lancache.net>
 
 ENV GENERICCACHE_VERSION=2 \
@@ -26,5 +26,5 @@ RUN git clone --depth=1 --no-single-branch https://github.com/uklans/cache-domai
 
 VOLUME ["/data/logs", "/data/cache", "/data/cachedomains", "/var/www"]
 
-EXPOSE 80
+EXPOSE 80 443
 WORKDIR /scripts
